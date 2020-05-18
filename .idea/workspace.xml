@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d23ad0c-558c-46af-b6b2-599b822f6265" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Aufgabe5/aufgabe5 erweitert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probe3/Klausur1/klausur1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probe3/Klausur1/sources/originalText.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probe3/Klausur1/sources/text.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probe3/__MACOSX/Klausur1/._.DS_Store" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probe3/probeklausur3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur1/indexJS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur1/playerConvert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur1/player_array.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur1/player_obj.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur1/probeklausur1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur2/probeZwei.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Aufgaben/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben/Aufgabe5/aufgabe5NEW.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben/Aufgabe6/aufgabe6.php" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben/Aufgabe6/aufgabe6.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben/Aufgabe6/mockdataarray.php" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben/Aufgabe6/mockdataarray.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben/Aufgabe8/aufgabe8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben/Aufgabe8/aufgabe8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben/Aufgabe9/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben/Aufgabe9/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben/Probeklausur1/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur1/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben/XtraUebung/HTMLbasisFormular.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben/XtraUebung/antwortFormMit_$POST.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben/XtraUebung/u_db_anzeigen.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aufgaben/styles/styles5.css" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben/styles/styles5.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nyx.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Aufgaben/Probeklausur1/.idea/Probeklausur1.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\xampp\htdocs\nyx\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="1SYlBqpFj8IkvJvhVyIyU3Tarv5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\nyx\Uebung\Uebung2" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d23ad0c-558c-46af-b6b2-599b822f6265" name="Default Changelist" comment="" />
+      <created>1571748278459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571748278459</updated>
+      <workItem from="1571748282354" duration="2978000" />
+      <workItem from="1571764408140" duration="5088000" />
+      <workItem from="1571909508960" duration="611000" />
+      <workItem from="1572338715374" duration="5403000" />
+      <workItem from="1572688375256" duration="5911000" />
+      <workItem from="1572715268640" duration="185000" />
+      <workItem from="1573235093483" duration="1042000" />
+      <workItem from="1573301932081" duration="81000" />
+      <workItem from="1573302030835" duration="3458000" />
+      <workItem from="1573322021803" duration="3389000" />
+      <workItem from="1573385138777" duration="5697000" />
+      <workItem from="1573395057897" duration="2927000" />
+      <workItem from="1573407292003" duration="2601000" />
+      <workItem from="1573409953772" duration="1184000" />
+      <workItem from="1573411995504" duration="766000" />
+      <workItem from="1573455631262" duration="3986000" />
+      <workItem from="1573549217661" duration="4119000" />
+      <workItem from="1573588252235" duration="9000" />
+      <workItem from="1573734366343" duration="43000" />
+      <workItem from="1574153903786" duration="65000" />
+      <workItem from="1574153986893" duration="12791000" />
+      <workItem from="1574600783026" duration="4805000" />
+      <workItem from="1574608913331" duration="96000" />
+      <workItem from="1574609028539" duration="4776000" />
+      <workItem from="1574613892982" duration="781000" />
+      <workItem from="1574759895083" duration="3593000" />
+      <workItem from="1575051526094" duration="1036000" />
+      <workItem from="1575297366713" duration="373000" />
+      <workItem from="1575297960623" duration="16000" />
+      <workItem from="1575297995907" duration="6463000" />
+      <workItem from="1575317038734" duration="71000" />
+      <workItem from="1575363366629" duration="3110000" />
+      <workItem from="1575366528002" duration="1682000" />
+      <workItem from="1575450265951" duration="4528000" />
+      <workItem from="1575714277011" duration="1254000" />
+      <workItem from="1575908658678" duration="2955000" />
+      <workItem from="1575967848083" duration="4448000" />
+      <workItem from="1576572772472" duration="5162000" />
+      <workItem from="1576580927629" duration="1335000" />
+      <workItem from="1578387123601" duration="5442000" />
+      <workItem from="1578741654557" duration="11844000" />
+      <workItem from="1578760278838" duration="869000" />
+      <workItem from="1578844396757" duration="29604000" />
+      <workItem from="1578991714763" duration="5767000" />
+      <workItem from="1579025330550" duration="844000" />
+      <workItem from="1579252761754" duration="118000" />
+      <workItem from="1579252942225" duration="22729000" />
+      <workItem from="1579353545375" duration="19599000" />
+      <workItem from="1579433240830" duration="12232000" />
+      <workItem from="1579791245883" duration="804000" />
+      <workItem from="1581771528910" duration="510000" />
+      <workItem from="1581772124987" duration="11925000" />
+      <workItem from="1581847944046" duration="4589000" />
+      <workItem from="1582036096556" duration="437000" />
+      <workItem from="1582102912315" duration="7682000" />
+      <workItem from="1584187221130" duration="7437000" />
+      <workItem from="1584275582496" duration="9834000" />
+      <workItem from="1589108435986" duration="2838000" />
+      <workItem from="1589200039054" duration="6172000" />
+      <workItem from="1589206408946" duration="3824000" />
+      <workItem from="1589279825172" duration="2286000" />
+      <workItem from="1589785859743" duration="14976000" />
+    </task>
+    <task id="LOCAL-00001" summary="Aufgaben 4-9 added">
+      <created>1578751731950</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578751731950</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Aufgaben des Semesters">
+      <created>1578753839751</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578753839751</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Aufgaben des Semesters">
+      <created>1578754773177</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578754773177</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Aufgaben des Semesters">
+      <created>1578757841054</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578757841054</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Aufgaben des Semesters">
+      <created>1578759434191</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578759434191</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/WebTech19" />
+      <path value="$PROJECT_DIR$/empty_project" />
+      <path value="$PROJECT_DIR$/nicht_in_zip" />
+    </ignored-roots>
+    <MESSAGE value="Aufgaben 4-9 added" />
+    <MESSAGE value="Aufgaben des Semesters" />
+    <MESSAGE value="Semesteraufgaben" />
+    <option name="LAST_COMMIT_MESSAGE" value="Semesteraufgaben" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="0" key="#Notifications" timestamp="1589803342490">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="0" key="#Notifications/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1589803342490" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589803069215">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1589803069215" />
+    <state x="380" y="144" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581778969082">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="380" y="144" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1581778969082" />
+    <state x="321" y="68" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1589205904989">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="321" y="68" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1589205904989" />
+    <state x="232" y="0" key="CommitChangelistDialog2" timestamp="1589803390112">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="232" y="0" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1589803390112" />
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog" timestamp="1589802847926">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" key="DiffContextDialog/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1589802847926" />
+    <state x="421" y="82" key="FileChooserDialogImpl" timestamp="1589803020435">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="82" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1589803020435" />
+    <state x="801" y="231" key="NewPhpFileDialog" timestamp="1584187383033">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="801" y="231" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1584187383033" />
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1589785862155">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1589785862155" />
+    <state x="450" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589802845771">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="450" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1589802845771" />
+    <state x="1920" y="0" width="953" height="477" maximized="true" key="dock-window-1" timestamp="1589789920827">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1920" y="0" width="953" height="477" maximized="true" key="dock-window-1/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1589789920827" />
+    <state x="343" y="0" width="951" height="476" key="dock-window-2" timestamp="1589790177805">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="343" y="0" width="951" height="476" key="dock-window-2/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1589790177805" />
+    <state x="343" y="0" width="951" height="476" key="dock-window-3" timestamp="1589790177805">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="343" y="0" width="951" height="476" key="dock-window-3/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1589790177805" />
+    <state x="2203" y="125" width="951" height="476" maximized="true" key="dock-window-4" timestamp="1589792339546">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2203" y="125" width="951" height="476" maximized="true" key="dock-window-4/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1589792339546" />
+    <state x="0" y="0" width="1294" height="737" key="dock-window-5" timestamp="1589801188153">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" width="1294" height="737" key="dock-window-5/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1589801188153" />
+  </component>
+</project>

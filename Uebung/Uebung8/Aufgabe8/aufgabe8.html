@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Staedte</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body onload='createTable(); document.getElementById("filter").focus();'>
+<div class="container">
+	<h1>Städte</h1>
+
+	<form class="form-horizontal" role="form">
+		<div class="form-group row">
+			<label for="filter" class="col-form-label col-2">Filter:</label>
+			<div class="col-10">
+				<input class="form-control" id="filter" oninput="createTable();" type="text" placeholder="Stadt oder Gruendungsjahr" > <!-- ganz wichtig: oninput=!! sonst passiert da jar nüschd -->
+			</div>
+		</div>
+	</form>
+
+	<div id="table" > //das ist das table-div, in das die tabelle eingefuegt werden soll
+	</div>
+
+	<div id="unten"></div>
+</div>
+<script>
+
+	function createTable()
+	{
+		var staedte = [
+			{ "jahr" : 1237, "stadt" : "Berlin", "link" : "http://de.wikipedia.org/wiki/Berlin", "bild" : "images/berlin.png"},
+			{ "jahr" : 1624, "stadt" : "New York", "link" : "http://de.wikipedia.org/wiki/New_York_City", "bild" : "images/newyork.png"},
+			{ "jahr" : 1252, "stadt" : "Stockholm", "link" : "http://de.wikipedia.org/wiki/Stockholm", "bild" : "images/stockholm.png"},
+			{ "jahr" : 852, "stadt" : "Madrid", "link" : "http://de.wikipedia.org/wiki/Madrid", "bild" : "images/madrid.png"},
+			{ "jahr" : 1827, "stadt" : "Bremerhaven", "link" : "http://de.wikipedia.org/wiki/Bremerhaven", "bild" : "images/bremerhaven.png"},
+			{ "jahr" : 150, "stadt" : "Bremen", "link" : "http://de.wikipedia.org/wiki/Bremen", "bild" : "images/bremen.png"},
+			{ "jahr" : 1202, "stadt" : "Bernau", "link" : "http://de.wikipedia.org/wiki/Bernau_bei_Berlin", "bild" : "images/bernau.png"},
+			{ "jahr" : 929, "stadt" : "Brandenburg", "link" : "http://de.wikipedia.org/wiki/Brandenburg_an_der_Havel", "bild" : "images/brandenburg.png"},
+			{ "jahr" : 805, "stadt" : "Magdeburg", "link" : "http://de.wikipedia.org/wiki/Magdeburg", "bild" : "images/magdeburg.png"},
+			{ "jahr" : 1222, "stadt" : "Marburg", "link" : "http://de.wikipedia.org/wiki/Marburg", "bild" : "images/marburg.png"},
+			{ "jahr" : 766, "stadt" : "Mannheim", "link" : "http://de.wikipedia.org/wiki/Mannheim", "bild" : "images/mannheim.png"},
+			{ "jahr" : 782, "stadt" : "Mainz", "link" : "http://de.wikipedia.org/wiki/Mainz", "bild" : "images/mainz.png"}
+		];
+
+		let input = document.getElementById('filter').value;		// eingegebene Daten (Formular)
+		console.log(input);
+
+		let tableDiv = document.getElementById('table');
+		if(tableDiv.firstChild) tableDiv.removeChild(tableDiv.firstChild);
+
+
+
+		let table = document.createElement('TABLE');
+		table.setAttribute('class', 'table table-striped');		// Bootstrap
+		let thead = document.createElement('THEAD');
+		let tr = document.createElement('TR');  //das ist die erste Tablerow, in die die ueberschriften eingefuegt werden sollen
+		let th = document.createElement('TH');
+		let tbody = document.createElement('TBODY');
+		let td = document.createElement('TD');
+
+		let _tr = tr.cloneNode(false);							// Variable für Clone von tr
+		let _td = td.cloneNode(false);							// Variable für Clone von td
+
+		// ab hier Spaltenüberschriften
+		let _th = th.cloneNode(false);
+		let _text = document.createTextNode('Nr');
+		_th.appendChild(_text);
+		tr.appendChild(_th); //an die original-table-row dran, die ist fuer ueberschriften reserviert
+
+		_th = th.cloneNode(false);
+		_text = document.createTextNode('Jahr');
+		_th.appendChild(_text);
+		tr.appendChild(_th);
+
+		_th = th.cloneNode(false);
+		_text = document.createTextNode('Stadt');
+		_th.appendChild(_text);
+		tr.appendChild(_th);
+
+		_th = th.cloneNode(false);
+		_text = document.createTextNode('Link');
+		_th.appendChild(_text);
+		tr.appendChild(_th);
+
+		_th = th.cloneNode(false);
+		_text = document.createTextNode('Bild');
+		_th.appendChild(_text);
+		tr.appendChild(_th);
+
+		thead.appendChild(tr);			// die tablerow mit den Spaltenueberschriften an thead haengen
+		table.appendChild(thead);		// thead an die Tabelle haengen
+
+		// hier muessen jetzt die einzelnen Zeilen in die Tabelle eingelesen werden
+		// das JSON-Array muss ausgelesen werden (for(i=0; i<staedte.length; i++))
+		//Tipp: zuerst alle anzeigen und dann das filtern einbauen
+
+
+		for (let i= 0; i<staedte.length;i++)
+		{
+			//1. pro durchlauf eine table-row erzeugen
+			_tr = tr.cloneNode(false);
+
+			//jetzt muss der Filter eingebaut werden. Die Idee: wenn es keine EIngabe gab, wird alles angezeigt, weil ich dann 2 leere Strings vergleiche
+			// Filtern: die Eingabe mit dem jeweiligen Gründungsjahr bzw. der jeweiligen Stadt vergleichen
+			// wenn match, dann entsprechende Zeile einfügen
+
+			if((staedte[i].stadt.substring(0, input.length).toLowerCase()=== input.toLowerCase()) || (staedte[i].jahr.toString().substring(0,input.length)=== input.toString()))
+			//also: wenn Bucstaben eingegeben werden und die mit einer Stadt überinstimmen            oder das gruendungsjahr - prueft nach jeder eingabe
+
+			{
+			//2. fuer die Werte der Stadt am INdex table-datas erstellen und diese am ende in die Zeile einfuegen
+			//zuerst die laufende Nummer:
+			_td = td.cloneNode(false);
+			_text = document.createTextNode((i+1).toString());
+			_td.appendChild(_text);
+			_tr.appendChild(_td);
+
+			//dann das Jahr (ist kein String)
+			_td = td.cloneNode(false);
+			_text = document.createTextNode(staedte[i].jahr);
+			_td.appendChild(_text);
+			_tr.appendChild(_td);
+
+			//dann die Stadt
+			_td= td.cloneNode(false);
+			_text = document.createTextNode(staedte[i].stadt);
+			_td.appendChild(_text);
+			_tr.appendChild(_td);
+
+
+			//den Link
+			_td= td.cloneNode(false);
+			let a = document.createElement('a');
+			a.href = staedte[i].link; //im JSON ist das schon ein LInk, deshalb kann ich direkt darauf zugreifen
+			                          //wenn es noch keiner waere: a.setAttribute('href', staedte[i].link);
+			//der Link soll ein button sein:
+			a.classList.add('btn', 'btn-sm', 'btn-success');  //alternativ: a.setAttribute('class', 'btn btn-sm btn-success);
+
+			//auf dem button soll 'Info' draufstehen:
+			a.innerHTML = 'Info';   //alternativ: ich kann einen textknoten erzeugen -text=document.createTexNode('info); und dann a.appendChild(_text);
+
+			//bei Links muss noch spezifiziert werden, welche Seite aufgerufen wird
+			a.setAttribute('target', '_blank');
+
+			_td.appendChild(a);
+			_tr.appendChild(_td);
+
+
+			//das Bild
+			_td = td.cloneNode(false);
+			let img = document.createElement('img');
+			img.src= staedte[i].bild;
+			img.style.height= '60px';
+			img.setAttribute('alt', staedte[i].stadt);
+			img.addEventListener('click', nachUnten);
+			_td.appendChild(img);
+			_tr.appendChild(_td);
+
+
+			//jetzt ist die Zeile fertig und kann an den tbody drangehaengt werden:
+			tbody.appendChild(_tr);
+
+		}
+
+		table.appendChild(thead);
+		table.appendChild(tbody);
+		tableDiv.appendChild(table); //das fertige ding an das tableDiv dranhaengen
+		}
+
+	}
+
+	// hier noch eine Funktion, die das Bild, auf das geklickt wurde, in
+	// das Div "unten" clont - das ist die
+	function nachUnten(){
+
+		let arrOfPics = [];
+		let unten = document.getElementById('unten');
+		let bild = event.currentTarget;
+		let _clonePic = bild.cloneNode(false);
+
+		/*arrOfPics.push(bild);
+		let index= arrayOfPics.findIndex(bild);
+
+		let initial = bild.getAttribute('alt').value;
+		if (index >0)
+		{
+			let leftNeigh = arrOfPics[index-1].getAttribute('alt').value;
+			if (leftNeigh.charCodeAt(0) > initial.charCodeAt(0)){
+
+				arrOfPics[bild]= arrOfPics[bild-2];
+			}
+		}*/
+
+		unten.appendChild(_clonePic);
+		}
+
+
+
+</script>
+</body>
+</html>

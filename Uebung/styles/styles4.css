@@ -1,0 +1,48 @@
+
+@media screen and (min-width: 720px) {
+    body {
+        background-color: #0082D1; /* HTW-blau */
+        font-size:1.2rem;
+            }
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    #oben {background-color: #5bc0de; color: black; padding: 5px; margin: 10px;}
+
+    #links{background-color: #a6e1ec; color:#ac2925;padding: 5px; margin-top: 10px; margin-bottom:10px; margin-left:10px;}
+
+    #mitte{background-color: #795da3; color: white;padding: 5px; margin-top: 10px; margin-bottom:10px;}
+
+    #rechts{background-color: #a6e1ec;color:#ac2925;padding: 5px; margin-top: 10px; margin-bottom:10px;margin-right: 10px;}
+
+    #unten{background-color: #5bc0de; color: black;padding: 5px; margin: 10px;}
+
+}
+@media only screen and (max-width:720px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+}
+    body {
+        background-color: deeppink;
+        font-size:1.2rem;
+    }
+
+    #oben {background-color: #e4b9c0; color: black;margin-top:5px; margin-bottom:5px;}
+
+    #links{background-color: #a6e1ec; color:black;margin-top:5px; margin-bottom:5px;}
+
+    #mitte{background-color: #a71d5d; color: white;margin-top:5px; margin-bottom:5px;}
+
+    #rechts{background-color: #a6e1ec;color:black;margin-top:5px; margin-bottom:5px;}
+
+    #unten{background-color:  #e4b9c0; color: black;margin-top:5px; margin-bottom:5px;}
+
+}
+
+
+
+
