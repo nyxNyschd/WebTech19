@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uebung 9</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+              crossorigin="anonymous">
+
+        <style>
+            header{width:100%; background-color: #888888; text-align:center; height: 80px }
+            h1{color:white; padding: 10px}
+            footer{position: absolute; bottom:0px;background-color:#888888; width:100%; text-align:center }
+            footer>a, footer>a:visited, footer>a:hover, footer>a:link{ text-decoration:none; color:white; text:bold}
+            #butt{background-color:#0082D1; color: white; border-radius: 5px; padding: 5px; margin: 5px}
+            #in {width:80%; padding: 5px; margin: 5px}
+
+            @media screen and (max-width: 768px){
+                #weg{display: none}}
+
+            #main1 {margin-left:5px}
+            #main2 {display:none}
+            #zuege {background-color:#0082D1; color:white; text-align:center; height:80px; margin-top:5px;margin-left:10px; width:100%; justify-content:center }
+            #wuerfel {background-color:#0082D1; height:200px; width:200px; margin:10px; line-height: 200px; color: white;font-size: xx-large ; font-weight:bold; text-align: center }
+            #wurfliste {margin-left: 50px}
+
+
+        </style>
+
+    </head>
+
+<body onload="controller()">
+    <div class="container-fluid">
+        <header>
+
+            <h1 id="h1">Ein Spiel</h1>
+
+        </header>
+   <div class="row" id="main1">
+        <div id="playerlist" class="col-12 col-md-3 list-group" >
+            <h3>Auswahl Spielerin</h3>
+
+        </div>
+
+
+        <div id="weg" class="col-12 col-md-2" >
+            <h3>    oder</h3>
+
+        </div>
+
+        <div id="formular" class="col-12 col-md-6" >
+            <h3>Neue Spielerin anlegen</h3>
+            <form method="post">
+                <input type="text" id="in" class="form-control" name="name" placeholder="Name">
+                <button type="submit" id="butt" class="btn btn-primary" onclick="newPlayer()">Neue Spielerin anlegen</button>
+            </form>
+        </div>
+   </div>
+    <div id="main2">
+           <div class="row">
+               <h2 id="zuege">Anzahl Zuege: 0</h2>
+           </div>
+
+           <div class="row">
+
+               <div id="wuerfel"  class="col-2" onclick="wuerfel()">
+               </div>
+
+               <div id="wurfliste" class="col-8">
+                   <h5>Liste der Würfe</h5>
+                   <ul id="wurf" class="list-group">
+                   </ul>
+               </div>
+
+           </div>
+    </div>
+   </div>
+        <footer>
+            <a href="http://webtech.f4.htw-berlin.de/~s0569853/WebTech19/Uebung/">Nyco C. Bischoff</a>
+        </footer>
+
+
+    </div>
+</body>
+<script>
+
+    function controller() {
+        var urlParams = new URLSearchParams(window.location.search);
+        if (!urlParams.has('name')) {
+            var player = [{"name": "Susan", "moves": 12},
+                {"name": "Catherine", "moves": 13},
+                {"name": "Anne", "moves": 11},
+                {"name": "Bonnie", "moves": 16},
+                {"name": "Rebecca", "moves": 10},
+                {"name": "Margaret", "moves": 17},
+                {"name": "Deborah", "moves": 15}];
+
+            createList(player);
+        }
+
+
+        else
+        {
+            document.getElementById("main1").style.display = 'none';
+            document.getElementById("main2").style.display = 'block';
+            let name = urlParams.get('name');
+            document.getElementById('h1').innerText = name + " spielt";
+
+
+        }
+    }
+
+    function createList(player){
+
+       var playerList= document.getElementById('playerlist');
+
+         for(let i=0; i<player.length; i++){
+             let a= document.createElement('a');
+             a.classList.add('list-group-item','list-group-item-action');
+             a.href = 'index.html?name=' + player[i].name;
+             a.innerText= player[i].name+ " ("+player[i].moves+ ")";
+             playerList.appendChild(a);
+       }
+    }
+
+    function newPlayer(){
+
+
+        var playerList= document.getElementById('playerlist');
+        let input= document.getElementById('in').value;
+        document.createElement('a');
+        a.classList.add('list-group-item','list-group-item-action');
+        a.href = 'index.html?name=' +input;
+        a.innerText= input+ " ( )";
+        playerList.appendChild(a);
+
+        document.getElementById('h1').innerHTML= input+" spielt";
+
+    }
+
+    var anzZuege=0;
+    function wuerfel(){
+        anzZuege++;
+
+        let zufWurf = Math.floor((Math.random() * 6) + 1);
+        if (zufWurf != 6) {
+            document.getElementById('wuerfel').innerText = zufWurf;
+
+            let wurf = document.createElement('li');
+            wurf.classList.add('list-group-item', 'list-group-item-action');
+
+            wurf.innerText = anzZuege + ". Wurf : " + zufWurf;
+            document.getElementById('wurf').appendChild(wurf);
+            document.getElementById('zuege').innerText = 'Anzahl Zuege : ' + anzZuege;
+        }
+        else{
+
+            //document.getElementById('wurf').style.color= 'red';
+            let lastWurf = document.createElement('li');
+            lastWurf.classList.add('list-group-item', 'list-group-item-action');
+            let text= lastWurf.createTextNode;
+            text.innerText = anzZuege + ". Wurf : 6 -->Ende (Startseite)" ;
+            text.style.color='red';
+            lastWurf.appendChild(text);
+
+            document.getElementById('wurf').appendChild(lastWurf);
+            document.getElementById('wuerfel').removeEventListener();
+        }
+    }
+
+</script>
+
+
+</html>
