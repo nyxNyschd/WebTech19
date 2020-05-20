@@ -53,9 +53,9 @@
 
         <div id="formular" class="col-12 col-md-6" >
             <h3>Neue Spielerin anlegen</h3>
-            <form method="post">
+            <form method="get">
                 <input type="text" id="in" class="form-control" name="name" placeholder="Name">
-                <button type="submit" id="butt" class="btn btn-primary" onclick="newPlayer()">Neue Spielerin anlegen</button>
+                <button type="submit" id="butt" class="btn btn-primary" >Neue Spielerin anlegen</button>
             </form>
         </div>
    </div>
@@ -126,8 +126,10 @@
        }
     }
 
-    function newPlayer(){
-
+   /* function newPlayer(){
+       Das:  onclick="newPlayer()
+       bracuhe ich gar nicht, wenn ich als form-method "get" habe und nicht (wie eigentlich in der AUfgabe) post,
+       weil mit "get" auch der Name angehängt wird und dann schickt mich der controller auch in main2
 
         var playerList= document.getElementById('playerlist');
         let input= document.getElementById('in').value;
@@ -139,7 +141,7 @@
 
         document.getElementById('h1').innerHTML= input+" spielt";
 
-    }
+    }*/
 
     var anzZuege=0;
     function wuerfel(){

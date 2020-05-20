@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Verdana
+        }
+
+        header {
+            background-color: lightgray;
+            width: 100%;
+            text-align: center;
+            color: darkgray;
+            font-weight: bold
+        }
+
+        footer {
+            background-color: lightgray;
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            text-align: center
+        }
+
+        footer > a, footer > a:link, footer > a:visited, footer > a:hover, footer > a:active {
+            color: black;
+        }
+
+        #toDo {
+            color: red
+        }
+
+        #butt {
+            background-color: blue;
+            color: white;
+            text-align: center
+        }
+
+        .karte {
+            background-color: grey;
+            height:100px;
+            margin-left: 5px;
+            margin-right:5px;
+            margin-bottom:5px;
+            box-shadow: 3px 3px;
+            text-align: center;
+            font-weight:bold;
+         padding-top: 40px;
+
+        }
+        .kartenReihe {
+            margin-left:10px;
+            margin-right:10px;
+        }
+
+        #main2{display:none}
+
+
+    </style>
+    <!--  @media only screen and(max-width: 768px){
+
+            }
+        @media only screen and(max-width: 992px){
+
+        } -->
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+        <h1>Klausur 2.PZ</h1>
+
+    </header>
+
+    <main id="main1" class="row col-12">
+        <div id="toDo" class="row">
+            <h3>Wählen Sie die Anzahl der Spalten (1-4) und die Anzahl der Bilder (4-10) aus</h3>
+        </div>
+
+
+        <div id="formcontainer" class="container-fluid">
+            <form id="form" role="form" class="form-horizontal" method="GET">
+
+                <div class="form-group row">
+                    <label for="inputRow" class="control-label col-sm-6 col-md-4">Anzahl Spalten (1-4): </label>
+
+
+                    <div class="col-sm-6 col-md-8">
+                        <input type="number" id="inputRow" class="col-sm-8 form-control" name="anzahlZeilen"
+                               onchange="validate()" placeholder="(1-4)">
+                        <div class="invalid-feedback" id="wrongSpalten">
+                            Die Anzahl der Spalten muss zwischen 1 und 4 (inkl.) sein!
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputCol" class="control-label col-sm-6 col-md-4">Anzahl Bilder (4-10): </label>
+
+                    <div class="col-sm-6 col-md-8">
+                        <input type="number" id="inputCol" class="col-sm-8 form-control" name="anzahlSpalten"
+                              placeholder="(4-10)" onchange="validate()">
+                        <div class="invalid-feedback" id="wrongCols">
+                            Die Anzahl der Bilder muss zwischen 4 und 10 (inkl.) sein!
+                        </div>
+
+                    </div>
+                </div>
+
+                <button type="submit" id="butt" class="btn btn-primary" onclick="createMatrix()">Weiter</button>
+
+            </form>
+        </div>
+
+        </main>
+
+    <div id="main2" class="row">
+
+
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+<footer>
+    <a href="http://webtech.f4.htw-berlin.de/~s0569853/WebTech19/Klausur/">Nyco C. Bischoff</a>
+</footer>
+
+<script>
+    function validate() {
+        let row = document.getElementById('inputRow');
+        let rowInput = document.getElementById('inputRow').value;
+        let rowOk = false;
+
+        if (rowInput >= 1 && rowInput <= 4) {
+            row.classList.remove("is-invalid");
+            row.classList.add("is-valid");
+            row.setAttribute("readonly", "readonly" );
+            rowOk = true;
+
+        } else {
+            row.classList.remove("is-valid");
+            row.classList.add("is-invalid");
+            row.focus();
+            row.select();
+            document.getElementById('wrongSpalten').style.color = 'red';
+
+        }
+
+
+        let col = document.getElementById('inputCol');
+        let colInput = document.getElementById('inputCol').value;
+
+        let colOk = false;
+
+        if (colInput >= 4 && colInput <= 10) {
+            col.classList.remove("is-invalid");
+            col.classList.add("is-valid");
+            col.setAttribute("readonly", "readonly" );
+            colOk = true;
+        } else {
+            col.classList.remove("is-valid");
+            col.classList.add("is-invalid");
+            col.focus();
+            col.select();
+            document.getElementById("wrongCols").style.color = 'red';
+            colOk = false;
+        }
+
+        if (colOk && rowOk) {
+        createMatrix(rowInput, colInput);
+       }
+    }
+
+
+    function createMatrix(row, col){
+        document.getElementById('main1').style.display="none";
+        document.getElementById('main2').style.display="block";
+
+        let matrixDiv = document.getElementById("main2");
+        let reihe = document.createElement('row');
+        reihe.classList.add("row", "kartenReihe");
+        let colDiv= document.createElement('div');
+        colDiv.classList.add("karte","col");
+
+        let zeilenUmbruch =document.createElement('div');
+        zeilenUmbruch.classList.add("w-100");
+
+        for (let i=0; i<row; i++){
+
+            for (let j=0; j<col;j++){
+            let _colDiv = colDiv.cloneNode(true);
+            _colDiv.innerText= i.toString();
+            _colDiv.addEventListener('click', clickiBunti);
+            reihe.appendChild(_colDiv);
+            }
+            let _zeilenUmbruch = zeilenUmbruch.cloneNode(true);
+            reihe.appendChild(_zeilenUmbruch);
+        }
+        matrixDiv.appendChild(reihe);
+    }
+
+    function clickiBunti(){
+
+        let geklickt = event.currentTarget;
+
+
+        if(geklickt.style.color=="white"){
+
+            geklickt.style.cssText= "color: black; background-color:grey";
+        }
+
+        else {
+            geklickt.style.cssText="color:white; background-color:red";
+        }
+    }
+
+</script>
+</html>
