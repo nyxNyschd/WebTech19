@@ -143,31 +143,28 @@
 
     var anzZuege=0;
     function wuerfel(){
-        anzZuege++;
 
-        let zufWurf = Math.floor((Math.random() * 6) + 1);
-        if (zufWurf != 6) {
-            document.getElementById('wuerfel').innerText = zufWurf;
 
-            let wurf = document.createElement('li');
-            wurf.classList.add('list-group-item', 'list-group-item-action');
+        if ( document.getElementById('wuerfel').innerText != 6) {
 
-            wurf.innerText = anzZuege + ". Wurf : " + zufWurf;
-            document.getElementById('wurf').appendChild(wurf);
+            let zufWurf = Math.floor((Math.random() * 6) + 1);
+            anzZuege++;
+
+            document.getElementById('wuerfel').innerText= zufWurf;
             document.getElementById('zuege').innerText = 'Anzahl Zuege : ' + anzZuege;
-        }
-        else{
 
-            //document.getElementById('wurf').style.color= 'red';
-            let lastWurf = document.createElement('li');
-            lastWurf.classList.add('list-group-item', 'list-group-item-action');
-            let text= lastWurf.createTextNode;
-            text.innerText = anzZuege + ". Wurf : 6 -->Ende (Startseite)" ;
-            text.style.color='red';
-            lastWurf.appendChild(text);
+            let li = document.createElement('li');
+            li.classList.add('list-group-item', 'list-group-item-action');
 
-            document.getElementById('wurf').appendChild(lastWurf);
-            document.getElementById('wuerfel').removeEventListener();
+         if  (zufWurf != 6){
+             li.innerText = anzZuege + '. Wurf : ' + zufWurf;
+                 }
+         else{
+             li.innerHTML = '<a href="index.html" style= "color:red; font-weight: bold">'+ anzZuege + '. Wurf : 6 -->Ende (Startseite) </a>'
+             }
+
+            document.getElementById('wurf').appendChild(li);
+
         }
     }
 
