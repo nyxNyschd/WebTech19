@@ -198,16 +198,17 @@
 
         if (event.keyCode == 13 && needle.length > 0) {
 
-            while (hay.substring(0, needle.length) === needle.length) {
-                let treffer = hay.match(needle);
-                treffer.cssText= "{background-color:yellow}";
-                result.push(treffer);
+            for (let i = 0; i < needle.length; i++) {
+                if (hay.substring(0, needle.length) === needle) {
+                    let treffer = hay.match(needle);
+                    treffer.cssText = "{background-color:yellow}";
+                    result.push(treffer);
+                }
+
+                return result;
             }
 
-            return result;
+
         }
-
-
-    }
 
 </script>
