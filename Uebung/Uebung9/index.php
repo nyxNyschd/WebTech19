@@ -15,7 +15,7 @@
         @media screen and (max-width: 768px){
             #mitte{display: none};
         }
-        #main {width:100%}
+        #currentTasks {width:100%}
 
     </style>
     <title>Uebung 9</title>
@@ -29,7 +29,7 @@
     </header>
     <body>
 
-    <div id="main" class= "row" >
+    <div id="currentTasks" class= "row" >
         <div id="links" class="col-sm-12 col-md-3">
             <!-- wenn kleiner view: eine ganze Spalte allein -->
             <h3> Auswahl Spielerin</h3>
